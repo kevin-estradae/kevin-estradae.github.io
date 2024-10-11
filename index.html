@@ -13,7 +13,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url('img/amar.png') no-repeat center center/100% 100%;
+            background: url('img/amar.png') no-repeat center center/cover;
             font-family: 'Arial', sans-serif;
         }
 
@@ -40,6 +40,7 @@
             padding: 20px;
             border-radius: 15px;
             text-align: center;
+            max-width: 90%; /* Limita el ancho del texto */
         }
 
         button {
@@ -69,6 +70,38 @@
             }
             50% {
                 transform: scale(1.05);
+            }
+        }
+
+        /* Media queries para pantallas más pequeñas (tabletas y móviles) */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 6vw; /* Ajuste de tamaño de fuente para pantallas más pequeñas */
+            }
+
+            h2 {
+                font-size: 4vw;
+            }
+
+            button {
+                font-size: 5vw;
+                padding: 10px 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 8vw;
+            }
+
+            h2 {
+                font-size: 5vw;
+            }
+
+            button {
+                font-size: 4vw;
+                padding: 8px 16px;
+                width: 100%; /* El botón ocupa todo el ancho */
             }
         }
     </style>
